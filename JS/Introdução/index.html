@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RocketSeat</title>
+    </head>
+    <body>
+        
+
+        <script>
+            //console.log('Hello World!');
+            var nome = 'Jeff';
+            var idade = 37;
+            var peso = 90.3;
+            var humano = true;
+
+            var alunos = ['Diego', 'Gabriel', 'Lucas'];
+
+            var aluno = {
+                nome: 'Jeffs',
+                idade: 36,
+                peso: 85.4,
+                humano: true,
+            };
+
+            var x = 10, y = 5;            
+
+            resultado = x + y;
+
+            console.log(alunos[1]);
+            console.log(aluno.peso);
+            console.log(x, y);
+            console.log(resultado);
+
+            x += 3; //a mesma que x = x + 3
+
+            console.log(x);
+
+            function soma (n1, n2) {
+                var resultado = n1 + n2;
+                return resultado;
+            }
+
+            resultado = soma(1, 2);
+
+            console.log(resultado);
+
+            function retornaSexo(genero) {
+                // if (genero === 'M') {
+                //     return sexo = 'MASCULINO';
+                // } else if (genero === 'F') {
+                //     return sexo = 'FEMININO';
+                // } else {
+                //     return sexo = 'É VIADO/SAPATÃO';
+                // }
+
+                switch (genero) {
+                    case 'M':
+                        return sexo = 'MASCULINO';
+                    case 'F':
+                        return sexo = 'FEMININO';
+                    default:
+                        return sexo = 'É VIADO/SAPATÃO';
+                }
+            }
+
+            console.log(retornaSexo('M'));
+
+            // AND, OR, NOT
+            // &&, ||, !
+
+            var sexo = 'M', idades = 18;
+
+            if (sexo === 'M' || idades >= 18) {
+                console.log('OK!')
+            }
+
+
+            var neg = 'N'
+
+            if (neg !== 'S') {
+                console.log('Negou!');
+            } else {
+                console.log('Não Negou!');
+            }
+
+
+            //var sinal = sexo === 'M';
+
+            var sinal = (sexo === 'F') ? 'Masculino' : 'Feminino';
+
+            // if (sexo === 'M') {
+            //     sinal = 'positivo';
+            // } else {
+            //     sinal = 'negativo';
+            // }
+
+            console.log(sinal);
+
+            // FOR, WHILE
+
+            for (var i = 0; i < 100; i++) {
+                console.log(i);
+            }
+
+            var j = 100;
+
+            while (j < 200) {
+                console.log(j);
+                j++;
+            }
+
+            function Tabuada(){
+                for (var a = 1; a <= 10; a++){
+                    for (var b = 0; b <= 10; b++){
+                        var r = a * b;
+                        console.log(a + ' x ' + b + ' = ' + r);
+                    }
+                    console.log('');
+                }
+            }
+
+            function HelloWorld(){
+                console.log('Hello World!');
+            }
+
+            function Espera(){
+                console.log('Wait 1 segundo!');
+            }
+
+            Tabuada();
+            
+            setInterval(HelloWorld, 1000);
+
+            setTimeout(Espera, 1000);     
+
+        </script>
+    </body>
+</html>
