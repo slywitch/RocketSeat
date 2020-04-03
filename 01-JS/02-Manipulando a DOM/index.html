@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">    
+    <title>Manipulando a DOM</title>
+</head>
+<body>
+    <div id="app">
+        <button id='botao' onmouseover="mostraAlerta()">Pressione aqui!</button>
+        <input id='nome' onkeypress='mostraAlerta()' />
+    </div>
+
+    <div class="box">teste</div>
+
+    <script>
+        function mostraAlerta() {
+            alert('Alertou!')
+        }
+
+        var linkElement = document.createElement('a');
+        linkElement.setAttribute('href', 'https://www.google.com.br');
+
+        var textElement = document.createTextNode('Acesse o GOOGLE por aqui');
+        linkElement.appendChild(textElement);
+
+        var containerElement = document.querySelector('#app');
+        containerElement.appendChild(linkElement);
+
+        var botaoElemente = document.querySelector('#botao');
+        containerElement.removeChild(botaoElemente);
+
+        var inputElement = document.querySelector('#nome');
+        containerElement.removeChild(inputElement);
+
+        var boxElement = document.querySelector('.box');
+        boxElement.style.width = 100;
+        boxElement.style.height = 100;
+        boxElement.style.backgroundColor = '#f00';
+
+    </script>
+</body>
+</html>
